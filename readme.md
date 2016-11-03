@@ -1,4 +1,14 @@
-## Laravel PHP Framework
+## Laravel Crud and Entrust
+
+## Install
+1. clone this project in the root directory
+2. -> $ composer install
+3. -> $ php artisan key:generate
+4. -> setup your database credentials (using .env file)
+5. -> php $ php artisan migrate
+5. I receive your suggestions
+
+## Laravel PHP Framework 5.1
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
 [![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
