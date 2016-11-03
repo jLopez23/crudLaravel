@@ -51,6 +51,7 @@
                         @if (Auth::guest())
                         <li><a href="{{url('auth/login')}}">Login</a></li>
                         <li><a href="{{url('auth/login2')}}">Login (Manual)</a></li>
+                        <li><a href="{{route('auth/register')}}">Register</a></li>
                         @else
                         <li>
                             <a href="#">{{ Auth::user()->name }}</a>

@@ -31,6 +31,10 @@ Route::post('auth/login_post',
     ]);
 Route::get('auth/logout', ['as' => 'auth/logout', 'uses' => 'Auth\AuthController@getLogout']);
 
+// Registration routes...
+Route::get('auth/register', 'Auth\AuthController@getRegister');
+Route::post('auth/register', ['as' => 'auth/register', 'uses' => 'Auth\AuthController@postRegister']);
+
 Route::post('create/rolpermission', ['as' => 'createRolPermission', 'uses' => 'Create\CreateController@createRolPermission']);
 
 /*Users Consult*/
