@@ -40,11 +40,13 @@
                                     <td>{{ $user->name }}</td>
                                     <td>{{ $user->email }}</td>
                                     <td>{{ $user->active }}</td>
+                                    <td><a class="btn btn-small btn-success" href="#modalRoles-{{$user->id}}" data-toggle="modal" title="{{ $user->name }}">Rol</a></td>
                                     <td><a class="btn btn-small btn-success" href="#modalEdit-{{$user->id}}" data-toggle="modal" title="{{ $user->name }}">Editar</a></td>
                                     <td><a class="btn btn-small btn-danger" href="{{ url('/users/' . $user->id) }}">Eliminar</a></td>
                                 </tr>
                             </tbody>
                             @include('modal.modalEditUsers')
+                            @include('modal.modalRoles')
                             @endforeach
                         </table>
                     </div>

@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use App\User;
 use Session;
 use Validator;
+use App\Role;
 class UserController extends Controller {
 
     /**
@@ -17,7 +18,7 @@ class UserController extends Controller {
      */
     public function index() {
         $users = User::all();
-
+        $roles = Role::all();
         foreach ($users as $user) {
             $active = $user->active;
             if ($active == 1) {
@@ -27,7 +28,7 @@ class UserController extends Controller {
             }
             $user->active = $active;
         }
-        return view('user.user', ['users' => $users]);
+        return view('user.user', ['users' => $users, 'roles' => $roles]);
     }
 
     /**
